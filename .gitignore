@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+
+# Data
+config/*
+data/*
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+
+# Logs
+*.log
+*.out
+
+# Testing
+.pytest_cache/
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependency lock files (optional)
+uv.lock
