@@ -1,7 +1,7 @@
 import os
 import pytest
 import openpyxl
-from src.meyigi_scripts.append_to_excel import append_to_excel
+from meyigi_scripts.append_to_excel import append_to_excel
 
 
 

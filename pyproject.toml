@@ -1,6 +1,6 @@
 [project]
 name = "meyigi-scripts"
-version = "0.1.0"
+version = "0.2.0"
 description = "A collection of useful scripts including Excel appending functionality."
 authors = [{ name = "Daniel Kanybekov", email = "kanybekovdaniel069@gmail.com" }]
 readme = "README.md"
@@ -9,9 +9,6 @@ requires-python = ">=3.12"
 dependencies = [
     "openpyxl>=3.1.5",
     "pytest>=8.3.5",
-    "setuptools>=76.0.0",
-    "twine>=6.1.0",
-    "wheel>=0.45.1",
 ]
 [tool.setuptools.packages]
 find = {}
