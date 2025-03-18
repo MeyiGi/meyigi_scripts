@@ -1,12 +1,13 @@
 [project]
 name = "meyigi-scripts"
-version = "0.2.0"
+version = "0.3.0"
 description = "A collection of useful scripts including Excel appending functionality."
 authors = [{ name = "Daniel Kanybekov", email = "kanybekovdaniel069@gmail.com" }]
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.12"
 dependencies = [
+    "openai>=1.66.3",
     "openpyxl>=3.1.5",
     "pytest>=8.3.5",
 ]

@@ -10,3 +10,7 @@
 
 ### Removed
 - Deleted unnecessary dependencies from the required libraries.
+
+## [0.3.0] - 2024-03-18
+### Added
+- get response from chatgpt added
