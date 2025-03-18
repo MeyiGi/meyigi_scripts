@@ -19,3 +19,23 @@ You can easily install **meyigi_scripts** via PyPI! Run the following command:
 
 ```bash
 pip install meyigi-scripts
+```
+
+---
+
+## 🔑 **Important: API Key Setup**
+
+If you're using scripts that interact with OpenAI's ChatGPT, you **must** set your API key before running them. Otherwise, the `get_response_function` will not work.
+
+Set your API key using the following command:
+
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+```
+
+Make sure to replace `your_api_key_here` with your actual OpenAI API key.
+
+---
+
+Now you're ready to start using `meyigi_scripts`! 🚀
+
