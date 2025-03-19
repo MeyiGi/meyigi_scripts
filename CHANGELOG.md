@@ -14,3 +14,10 @@
 ## [0.3.0] - 2024-03-18
 ### Added
 - get response from chatgpt added
+
+### [0.4.0] - 2024-03-19
+### Added
+- get_requests function was added
+
+### Removed
+- removed unwanted dependencies for library
