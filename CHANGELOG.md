@@ -15,9 +15,13 @@
 ### Added
 - get response from chatgpt added
 
-### [0.4.0] - 2024-03-19
+## [0.4.0] - 2024-03-19
 ### Added
 - get_requests function was added
 
 ### Removed
 - removed unwanted dependencies for library
+
+## [0.5.0] - 2024-03-20
+### Added
+- now we can make requests to gemini api to get str or dict
