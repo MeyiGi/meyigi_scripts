@@ -25,3 +25,10 @@
 ## [0.5.0] - 2024-03-20
 ### Added
 - now we can make requests to gemini api to get str or dict
+
+## [1.1.0] - 2024-03-21
+### Added
+- implemented append_to_json function which will append to json
+
+### Changed
+- was changed file structure of library for better importing
