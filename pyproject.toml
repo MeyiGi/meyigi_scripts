@@ -1,6 +1,6 @@
 [project]
 name = "meyigi-scripts"
-version = "0.5.0"
+version = "1.1.0"
 description = "A collection of useful scripts including Excel appending functionality."
 authors = [{ name = "Daniel Kanybekov", email = "kanybekovdaniel069@gmail.com" }]
 readme = "README.md"

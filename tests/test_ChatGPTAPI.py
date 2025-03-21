@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import MagicMock, patch
 from openai import OpenAI
-from meyigi_scripts.ChatGPTAPI import chatgpt_get_response  # Replace 'your_module' with the actual module name
+from meyigi_scripts.ai_integrations.ChatGPTAPI import chatgpt_get_response  # Replace 'your_module' with the actual module name
 
 @pytest.fixture
 def mock_openai():
