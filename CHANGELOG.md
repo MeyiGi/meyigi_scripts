@@ -32,3 +32,7 @@
 
 ### Changed
 - was changed file structure of library for better importing
+
+## [1.2.0] - 2024-03-21
+### Added
+- function which is cleaning texts was added
