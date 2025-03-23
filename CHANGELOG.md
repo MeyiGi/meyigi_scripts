@@ -33,6 +33,10 @@
 ### Changed
 - was changed file structure of library for better importing
 
-## [1.2.0] - 2024-03-21
+## [1.2.0] - 2024-03-22
 ### Added
 - function which is cleaning texts was added
+
+## [1.3.0] - 2024-03-23
+### Added
+- function which is retriying concrete times if appear errors
