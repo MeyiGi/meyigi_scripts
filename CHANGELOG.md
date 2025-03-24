@@ -40,3 +40,7 @@
 ## [1.3.0] - 2024-03-23
 ### Added
 - function which is retriying concrete times if appear errors
+
+## [1.4.0] - 2024-03-24
+### Added
+- fucntion which is preventing fall asleep
