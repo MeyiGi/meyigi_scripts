@@ -44,3 +44,7 @@
 ## [1.4.0] - 2024-03-24
 ### Added
 - fucntion which is preventing fall asleep
+
+## [1.4.0] - 2024-03-25
+### Fixed
+- fucntion which is preventing fall asleep
