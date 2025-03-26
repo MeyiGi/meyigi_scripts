@@ -5,3 +5,4 @@ from .get_requests import *
 from .clean_string import *
 from .retry import *
 from .prevent_sleep import prevent_sleep
+from .download_file import download_file

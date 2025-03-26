@@ -48,3 +48,7 @@
 ## [1.4.1] - 2024-03-25
 ### Fixed
 - fucntion which is preventing fall asleep
+
+## [1.5.1] - 2024-03-25
+### Fixed
+- function which is downloading file with wget
