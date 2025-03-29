@@ -3,7 +3,7 @@ import requests
 
 def get_requests(url: str, timeout: int = 10, headers: dict = None) -> BeautifulSoup:
     try:
-        response = requests.get(url=url, headers=headers)
+        response = requests.get(url=url, headers=headers, timeout=timeout)
         response.raise_for_status()
     except requests.exceptions.HTTPError as errh:
         raise requests.exceptions.HTTPError("HTTP Error: {errh}")

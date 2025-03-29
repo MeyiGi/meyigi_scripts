@@ -50,5 +50,12 @@
 - fucntion which is preventing fall asleep
 
 ## [1.5.1] - 2024-03-25
-### Fixed
+### Added
 - function which is downloading file with wget
+
+## [1.5.2] - 2024-03-25
+### Modified
+- append_to_excel modified to work with lists
+
+### Fixed
+- get_requests timeout is working fine now
