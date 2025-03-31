@@ -59,3 +59,7 @@
 
 ### Fixed
 - get_requests timeout is working fine now
+
+## [1.5.3] - 2024-03-25
+### Modified
+- append_to_json modified to work with lists
