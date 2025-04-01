@@ -4,6 +4,26 @@ from typing import Union, List
 
 # Function to append data to Excel
 def append_to_excel(data: Union[dict, List[dict]], filename: str = "output.xlsx") -> None:
+    """Appends dictionary or list of dictionaries to an Excel file.
+
+    Args:
+        data (Union[dict, List[dict]]): collectios of data for adding to filename
+        filename (str, optional): generating filename Defaults to "output.xlsx".
+
+    Raises:
+        TypeError: Raised if 'data' is neither a dictionary nor a list of dictionaries.
+
+    Returns:
+        None: functions is not returning anything but saves data in filename
+        
+    Examples:
+        res = {"Name": "Daniel", "Age" : 20}
+        append_to_excel(res, "data/output.excel")
+
+        res = [{"Name": "Daniel", "Age" : 20}, {"Name": "Daniel", "Age" : 20}]
+        append_to_excel(res, "data/output.excel")
+    """
+
     # Проверяем корректность входных данных
     if not isinstance(data, (dict, list)) or (isinstance(data, list) and not all(isinstance(item, dict) for item in data)):
         raise TypeError("Argument 'data' must be a dictionary or a list of dictionaries.")

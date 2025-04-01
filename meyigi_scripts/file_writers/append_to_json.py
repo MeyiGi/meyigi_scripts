@@ -3,7 +3,25 @@ import os
 from typing import List, Union
 
 def append_to_json(data: Union[dict, List[dict]], filename: str = "output.json") -> None:
-    """Appends data to a JSON file. Creates the file if it does not exist."""
+    """Appends dictionary or list of dictionaries to an Json file.
+
+    Args:
+        data (Union[dict, List[dict]]): collectios of data for adding to filename
+        filename (str, optional): generating filename Defaults to "output.xlsx".
+
+    Raises:
+        TypeError: Raised if 'data' is neither a dictionary nor a list of dictionaries.
+
+    Returns:
+        None: functions is not returning anything but saves data in filename
+        
+    Examples:
+        res = {"Name": "Daniel", "Age" : 20}
+        append_to_json(res, "data/output.json")
+
+        res = [{"Name": "Daniel", "Age" : 20}, {"Name": "Daniel", "Age" : 20}]
+        append_to_json(res, "data/output.json")
+    """
     if not isinstance(data, (dict, list)) or (isinstance(data, list) and not all(isinstance(item, dict) for item in data)):
         raise TypeError("Argument 'data' must be a dictionary or a list of dictionaries.")
 
