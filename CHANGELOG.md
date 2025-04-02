@@ -72,3 +72,8 @@
 - DocString for get_requests
 - DocString for download_file
 - DocString for prevent_sleep
+
+## [1.5.5] - 2024-04-01
+### Added
+- DocString for chatgpt_get_response
+- DocString for generative
