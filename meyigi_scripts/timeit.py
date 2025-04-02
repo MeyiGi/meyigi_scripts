@@ -2,6 +2,11 @@ import time
 from functools import wraps
 
 def timeit(func):
+    """Decorator which is measuring time to executed 
+
+    Args:
+        func (_type_): taking a function to measure
+    """
     @wraps(func)
     def wrapper(*args, **kwargs):
         start_time = time.time()
