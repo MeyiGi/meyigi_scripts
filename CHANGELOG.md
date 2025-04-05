@@ -77,3 +77,7 @@
 ### Added
 - DocString for chatgpt_get_response
 - DocString for generative
+
+## [1.6.5] - 2024-04-01
+### Added
+- Added init_project fucntion which is will automatically init project

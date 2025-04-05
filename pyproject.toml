@@ -1,6 +1,6 @@
 [project]
 name = "meyigi-scripts"
-version = "1.5.5"
+version = "1.6.5"
 description = "A collection of useful scripts including Excel appending functionality."
 authors = [{ name = "Daniel Kanybekov", email = "kanybekovdaniel069@gmail.com" }]
 readme = "README.md"
@@ -8,16 +8,9 @@ license = { text = "MIT" }
 requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4>=0.0.2",
-    "flask>=3.1.0",
-    "google>=3.0.0",
-    "google-genai>=1.7.0",
     "lxml>=5.3.1",
-    "openai>=1.66.3",
     "openpyxl>=3.1.5",
-    "pyautogui>=0.9.54",
-    "pytest>=8.3.5",
     "python-dotenv>=1.0.1",
-    "wget>=3.2",
 ]
 [tool.setuptools.packages]
 find = {}
