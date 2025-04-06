@@ -37,7 +37,7 @@ def setup_envrc():
     subprocess.run(["direnv", "allow"])
     print("Setup .envrc and allowed direnv")
 
-def main():
+def init_project():
     create_dirs()
     create_files()
     setup_virtualenv()

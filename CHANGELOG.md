@@ -81,3 +81,8 @@
 ## [1.6.5] - 2024-04-01
 ### Added
 - Added init_project fucntion which is will automatically init project
+
+## [1.6.6] - 2024-04-01
+### Fixed
+- Dependencies should be contained
+- init_project.main() -> init_project()
