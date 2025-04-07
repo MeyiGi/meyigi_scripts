@@ -6,7 +6,6 @@ from meyigi_scripts.file_writers.append_to_excel import append_to_excel
 
 
 @pytest.fixture
-@pytest.mark.excel
 def temp_excel_file():
     """Creates a temporary Excel file for testing."""
     filename = "data/test_output.xlsx"

@@ -4,7 +4,6 @@ import pytest
 from meyigi_scripts.file_writers.append_to_json import append_to_json
 
 @pytest.fixture
-@pytest.mark.json
 def temp_json_file():
     filename = "data/test.json"
     if os.path.exists(filename):

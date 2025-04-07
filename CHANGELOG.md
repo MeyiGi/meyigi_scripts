@@ -86,3 +86,7 @@
 ### Fixed
 - Dependencies should be contained
 - init_project.main() -> init_project()
+
+## [1.6.7] - 2024-04-07
+### Fixed
+- get_attributes function added
