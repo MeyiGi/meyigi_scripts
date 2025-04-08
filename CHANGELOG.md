@@ -90,3 +90,7 @@
 ## [1.6.7] - 2024-04-07
 ### Fixed
 - get_attributes function added
+
+## [1.7.0] - 2024-04-08
+### Fixed
+- added scroll to bottom function
