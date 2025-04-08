@@ -4,7 +4,7 @@ from .timeit import *
 from .get_requests import *
 from .clean_string import *
 from .retry import *
-from .prevent_sleep import *
+from .system.prevent_sleep import *
 from .download_file import *
-from .init_project import init_project
+from .system import *
 from .get_attributes import get_attributes
