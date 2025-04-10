@@ -94,3 +94,8 @@
 ## [1.7.0] - 2024-04-08
 ### Fixed
 - added scroll to bottom function
+
+
+## [1.8.0] - 2024-04-10
+### Fixed
+- added get_item from product function
