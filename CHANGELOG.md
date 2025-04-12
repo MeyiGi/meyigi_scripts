@@ -99,3 +99,8 @@
 ## [1.8.0] - 2024-04-10
 ### Fixed
 - added get_item from product function
+
+## [1.8.0] - 2024-04-12
+### Fixed
+- added load txt function
+- added append to txt function
