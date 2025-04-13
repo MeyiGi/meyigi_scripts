@@ -100,7 +100,11 @@
 ### Fixed
 - added get_item from product function
 
-## [1.8.0] - 2024-04-12
+## [1.9.0] - 2024-04-12
 ### Fixed
 - added load txt function
 - added append to txt function
+
+## [1.9.1] - 2024-04-13
+### Modified
+- get_attributes -> get_attribute: now we can send to this function either use list or one Tag
