@@ -108,3 +108,7 @@
 ## [1.9.1] - 2024-04-13
 ### Modified
 - get_attributes -> get_attribute: now we can send to this function either use list or one Tag
+
+## [1.9.2] - 2024-04-13
+### Modified
+- append_to_txt modified now we can pass list

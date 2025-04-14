@@ -25,3 +25,17 @@ def test_append_to_txt(filename):
     assert f"{data[2]}\n" == results[2] 
     assert f"{data[0]}\n" == results[0]
     
+
+@pytest.mark.txt
+def test_append_to_txt_multuple(filename):
+    data = ["hoho", "jojo", "koko"]
+
+    append_to_txt(data, filename)
+    
+    with open(filename, "r", encoding="utf-8") as file:
+        results = file.readlines()
+
+    assert f"{data[1]}\n" == results[1]
+    assert f"{data[2]}\n" == results[2] 
+    assert f"{data[0]}\n" == results[0]
+    
