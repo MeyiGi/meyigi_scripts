@@ -112,3 +112,7 @@
 ## [1.9.2] - 2024-04-13
 ### Modified
 - append_to_txt modified now we can pass list
+
+## [1.10.0] - 2024-04-15
+### Added
+- truncate_string function added
