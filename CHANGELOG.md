@@ -116,3 +116,7 @@
 ## [1.10.0] - 2024-04-15
 ### Added
 - truncate_string function added
+
+## [1.11.0] - 2024-04-15
+### Added
+- load_html_files function added
