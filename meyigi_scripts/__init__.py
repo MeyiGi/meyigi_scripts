@@ -11,3 +11,4 @@ from .system import *
 from .get_item import *
 from .get_attribute import *
 from .truncate_string import *
+from .ColorPrinter import *

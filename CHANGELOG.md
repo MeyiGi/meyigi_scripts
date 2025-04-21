@@ -120,3 +120,7 @@
 ## [1.11.0] - 2024-04-15
 ### Added
 - load_html_files function added
+
+## [1.12.0] - 2024-04-21
+### Added
+- ColorPrinter class added
