@@ -12,3 +12,4 @@ from .get_item import *
 from .get_attribute import *
 from .truncate_string import *
 from .ColorPrinter import *
+from .generate_filename import *

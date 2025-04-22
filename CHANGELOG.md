@@ -124,3 +124,7 @@
 ## [1.12.0] - 2024-04-21
 ### Added
 - ColorPrinter class added
+
+## [1.13.0] - 2024-04-22
+### Added
+- Generate filename function added
