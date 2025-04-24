@@ -128,3 +128,8 @@
 ## [1.13.0] - 2024-04-22
 ### Added
 - Generate filename function added
+
+## [1.14.0] - 2024-04-24
+### Added
+- Setup Playwright function added
+- get random headers function added
