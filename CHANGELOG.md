@@ -133,3 +133,9 @@
 ### Added
 - Setup Playwright function added
 - get random headers function added
+
+## [1.15.0] - 2024-04-27
+### Added
+- random_proxy function added
+- random_delay function added
+- get_selector function added
