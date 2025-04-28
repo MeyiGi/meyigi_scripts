@@ -139,3 +139,7 @@
 - random_proxy function added
 - random_delay function added
 - get_selector function added
+
+## [1.16.0] - 2024-04-28
+### modified
+- get_attribute now we can work with playwright elements
