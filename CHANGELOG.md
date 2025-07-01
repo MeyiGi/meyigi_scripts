@@ -143,3 +143,8 @@
 ## [1.16.0] - 2024-04-28
 ### modified
 - get_attribute now we can work with playwright elements
+
+## [1.17.0] - 2025-06-01
+### Added
+- Browser protocol
+- Playwright Undetected browser class
