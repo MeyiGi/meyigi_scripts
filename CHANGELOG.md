@@ -148,3 +148,8 @@
 ### Added
 - Browser protocol
 - Playwright Undetected browser class
+
+
+## [1.18.0] - 2025-06-01
+### Added
+- Wait min for elements added
