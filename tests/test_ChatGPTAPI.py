@@ -1,12 +1,12 @@
 import pytest
 from unittest.mock import MagicMock, patch
 from openai import OpenAI
-from meyigi_scripts.ai_integrations.ChatGPTAPI import chatgpt_get_response  # Replace 'your_module' with the actual module name
+from meyigi_scripts.ai.chatgpt import chatgpt_get_response  # Replace 'your_module' with the actual module name
 
 @pytest.fixture
 def mock_openai():
     """Fixture to mock OpenAI client"""
-    with patch("meyigi_scripts.ChatGPTAPI.OpenAI") as mock_openai_class:
+    with patch("meyigi_scripts.ai.chatgpt.OpenAI") as mock_openai_class:
         mock_client = MagicMock()
         mock_completion = MagicMock()
         mock_completion.choices = [MagicMock(message=MagicMock(content="Mocked Response"))]
@@ -38,7 +38,7 @@ def test_chatgpt_get_response_custom_role(mock_openai):
 
 def test_chatgpt_get_response_api_failure():
     """Test if chatgpt_get_response handles API errors gracefully"""
-    with patch("meyigi_scripts.ChatGPTAPI.OpenAI") as mock_openai_class:
+    with patch("meyigi_scripts.ai.chatgpt.OpenAI") as mock_openai_class:
         mock_client = MagicMock()
         mock_client.chat.completions.create.side_effect = Exception("API error")
         mock_openai_class.return_value = mock_client

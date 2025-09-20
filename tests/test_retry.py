@@ -1,6 +1,6 @@
 import pytest
 import time
-from meyigi_scripts.retry import retry  # Replace 'your_module' with the actual module name
+from meyigi_scripts import retry  # Replace 'your_module' with the actual module name
 
 # Helper function to count calls
 class CallCounter:

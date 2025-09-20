@@ -153,3 +153,16 @@
 ## [1.18.0] - 2025-06-01
 ### Added
 - Wait min for elements added
+
+## [2.0.0] - 2025-09-20
+### Project Restructure & Imports: 
+The library's internal file structure has been significantly reorganized into functional modules (ai, scraping, fileio, system, utils). While top-level imports via from meyigi_scripts import ... are preserved for convenience, direct imports will be broken.
+### Asynchronous Playwright API: 
+The PlaywrightUndetected class and browser utilities (setup_browser, wait_for_min_elements) now use an async API. All related function calls must be updated with await.
+### Removed download_file Function: 
+The legacy wget-based download_file function has been removed. All file downloads should now be handled through Playwright's native download capabilities, which are integrated into the PlaywrightUndetected class.
+### Changed
+#### Architectural Overhaul: Refactored the entire project into a more modular and maintainable structure with clear separation of concerns.
+#### Switched all Playwright-based functions to an asynchronous API for significant performance improvements and to align with modern web automation practices.
+### Removed
+download_file function, to streamline the library and remove the wget dependency.

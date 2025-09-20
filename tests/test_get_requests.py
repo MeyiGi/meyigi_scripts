@@ -1,7 +1,7 @@
 import pytest
 import requests
 from bs4 import BeautifulSoup
-from meyigi_scripts.get_requests import get_requests
+from meyigi_scripts import get_requests
 
 @pytest.fixture
 def url():

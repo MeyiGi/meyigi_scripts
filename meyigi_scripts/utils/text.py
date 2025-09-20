@@ -1,6 +1,33 @@
+import os
+import re
 from colorama import Fore, Style, init
-
+from datetime import datetime
 init(autoreset=True)
+
+def truncate_string(s: str, max_length: int, triple_dot: bool = True) -> str:
+    """Truncates a string if it exceeds a given max length."""
+    if triple_dot:
+        return s[:max_length] + "..." if len(s) > max_length else s
+    return s[:max_length] if len(s) > max_length else s
+
+def clean_string(text: str) -> str:
+    """
+    Function which is deleting trash from the given string
+
+    :params text: Initial string
+    :return: cleaned text
+    """
+    
+    cleaned_text = re.sub(r'[^a-zA-Zа-яА-Я0-9\s]', '', text)
+    cleaned_text = re.sub(r'\s+', ' ', cleaned_text).strip()
+    return cleaned_text
+
+def generate_filename(filename: str, *, is_clean: bool = True) -> str:
+    name, ext = os.path.splitext(filename)
+    date = datetime.now().strftime("%y-%m-%d_%H:%M:%S") + f"_{datetime.now().microsecond // 1000:03d}ms"
+    if is_clean: filename = clean_string(filename)
+    return f"{name}{date}.{ext}"
+
 
 class ColorPrinter:
     """

@@ -1,5 +1,5 @@
 import pytest
-from meyigi_scripts.clean_string import clean_string
+from meyigi_scripts import clean_string
 
 def test_clean_string():
     text = "Example of text &*(&*(&(*&#)))            hello"

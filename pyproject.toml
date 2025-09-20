@@ -1,30 +1,44 @@
 [project]
 name = "meyigi-scripts"
-version = "1.18.0"
-description = "A collection of useful scripts including Excel appending functionality."
+version = "2.0.0"
+description = "A collection of useful scripts for AI, scraping, file I/O, and automation."
 authors = [{ name = "Daniel Kanybekov", email = "kanybekovdaniel069@gmail.com" }]
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.12"
 dependencies = [
-    "beautifulsoup4>=0.0.2",
+    # Core runtime deps (lightweight, always needed)
+    "beautifulsoup4>=4.12",
+    "requests>=2.31",
     "colorama>=0.4.6",
-    "fake-useragent>=2.2.0",
-    "flask>=3.1.0",
-    "google>=3.0.0",
-    "google-genai>=1.7.0",
-    "lxml>=5.3.1",
-    "openai>=1.66.3",
-    "openpyxl>=3.1.5",
-    "playwright>=1.51.0",
-    "pyautogui>=0.9.54",
-    "pytest>=8.3.5",
-    "python-dotenv>=1.0.1",
-    "wget>=3.2",
+    "lxml>=5.3",
 ]
+
+[project.optional-dependencies]
+ai = [
+    "openai>=1.10",
+    "google-genai>=1.0",
+]
+scraping = [
+    "playwright>=1.45",
+    "fake-useragent>=2.0",
+]
+excel = [
+    "openpyxl>=3.1",
+]
+system = [
+    "pyautogui>=0.9.54",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.14",
+    "requests-mock>=1.11",
+]
+
 [tool.setuptools.packages]
 find = {}
 
 [project.urls]
 Homepage = "https://github.com/MeyiGi/meyigi_scripts"
 Repository = "https://github.com/MeyiGi/meyigi_scripts"
+Issues = "https://github.com/MeyiGi/meyigi_scripts/issues"

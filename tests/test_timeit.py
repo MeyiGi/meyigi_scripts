@@ -1,7 +1,7 @@
 import time
 import pytest
 from functools import wraps
-from meyigi_scripts.timeit import timeit
+from meyigi_scripts import timeit
 
 @timeit
 def sample_function(n):
