@@ -1,6 +1,6 @@
 import json
 import os
-from typing import List, Union
+from typing import List, Union, Dict
 
 def append_to_json(data: Union[dict, List[dict]], filename: str = "output.json") -> None:
     """Appends dictionary or list of dictionaries to an Json file.
@@ -43,3 +43,53 @@ def append_to_json(data: Union[dict, List[dict]], filename: str = "output.json")
 
     with open(filename, "w", encoding="utf-8") as file:
         json.dump(existing_data, file, ensure_ascii=False, indent=4)
+
+
+def read_json_file(filename: str) -> List[Dict]:
+    """
+    Reads a JSON file and returns a list of dictionaries.
+    
+    Args:
+        filename (str): Path to the JSON file.
+    
+    Returns:
+        List[Dict]: List of dictionaries read from the JSON file.
+    """
+    if not os.path.exists(filename):
+        raise FileNotFoundError(f"File '{filename}' does not exist.")
+    
+    with open(filename, "r", encoding="utf-8") as file:
+        try:
+            data = json.load(file)
+        except json.JSONDecodeError:
+            raise ValueError(f"File '{filename}' contains invalid JSON.")
+    
+    # Ensure the output is always a list of dictionaries
+    if isinstance(data, dict):
+        return [data]
+    elif isinstance(data, list) and all(isinstance(item, dict) for item in data):
+        return data
+    else:
+        raise ValueError(f"File '{filename}' must contain a dict or a list of dicts.")
+
+def read_json_folder(folder: str) -> List[Dict]:
+    """
+    Reads all JSON files in a folder and combines them into a single list of dictionaries.
+    
+    Args:
+        folder (str): Path to the folder containing JSON files.
+    
+    Returns:
+        List[Dict]: Combined list of dictionaries from all JSON files.
+    """
+    if not os.path.isdir(folder):
+        raise NotADirectoryError(f"'{folder}' is not a valid directory.")
+    
+    combined_data: List[Dict] = []
+    
+    for filename in os.listdir(folder):
+        if filename.endswith(".json"):
+            file_path = os.path.join(folder, filename)
+            combined_data.extend(read_json_file(file_path))
+    
+    return combined_data

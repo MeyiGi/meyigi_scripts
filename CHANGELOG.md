@@ -166,3 +166,9 @@ The legacy wget-based download_file function has been removed. All file download
 #### Switched all Playwright-based functions to an asynchronous API for significant performance improvements and to align with modern web automation practices.
 ### Removed
 download_file function, to streamline the library and remove the wget dependency.
+
+
+## [2.1.0] - 2025-09-20
+### Added
+- Read json function
+- Read json folder function

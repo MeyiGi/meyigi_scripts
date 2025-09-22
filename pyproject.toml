@@ -1,6 +1,6 @@
 [project]
 name = "meyigi-scripts"
-version = "2.0.0"
+version = "2.1.0"
 description = "A collection of useful scripts for AI, scraping, file I/O, and automation."
 authors = [{ name = "Daniel Kanybekov", email = "kanybekovdaniel069@gmail.com" }]
 readme = "README.md"
@@ -12,6 +12,16 @@ dependencies = [
     "requests>=2.31",
     "colorama>=0.4.6",
     "lxml>=5.3",
+    "openai>=1.10",
+    "google-genai>=1.0",
+    "playwright>=1.45",
+    "fake-useragent>=2.0",
+    "openpyxl>=3.1",
+    "pyautogui>=0.9.54",
+    "pytest>=8.0",
+    "pytest-mock>=3.14",
+    "requests-mock>=1.11",
+    "wget>=3.2",
 ]
 
 [project.optional-dependencies]
