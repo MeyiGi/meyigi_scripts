@@ -172,3 +172,7 @@ download_file function, to streamline the library and remove the wget dependency
 ### Added
 - Read json function
 - Read json folder function
+
+## [2.1.1] - 2025-09-23
+### Added
+- Updated prevent_sleep function now it is moving mouse
