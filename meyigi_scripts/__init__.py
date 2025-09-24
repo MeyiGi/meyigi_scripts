@@ -5,7 +5,7 @@ from .ai.chatgpt import chatgpt_get_response
 from .ai.gemini import generate
 
 from .fileio.excel import append_to_excel
-from .fileio.json import append_to_json
+from .fileio.json import append_to_json, read_json_file, read_json_folder
 from .fileio.text import append_to_txt, load_txt
 from .fileio.loaders import load_html_files
 

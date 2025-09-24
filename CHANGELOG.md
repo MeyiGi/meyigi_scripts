@@ -176,3 +176,7 @@ download_file function, to streamline the library and remove the wget dependency
 ## [2.1.1] - 2025-09-23
 ### Added
 - Updated prevent_sleep function now it is moving mouse
+
+## [2.1.2] - 2025-09-24
+### Added
+- Fixed import errors
