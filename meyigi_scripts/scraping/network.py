@@ -1,10 +1,15 @@
-from bs4 import BeautifulSoup
-import requests
 import wget
+import random
+import requests
+from bs4 import BeautifulSoup
+from fake_useragent import UserAgent
+
+# Initialize UserAgent once to avoid repeated overhead
+_ua = UserAgent()
 
 def get_random_headers(
     referer: str = None,
-    accept_language: str = "en-US,en;q=0.9",
+    accept_language: str = None,
     accept_encoding: str = "gzip, deflate, br",
     connection: str = "keep-alive"
 ) -> dict:
@@ -12,17 +17,29 @@ def get_random_headers(
     Generate random HTTP headers for making web requests.
 
     :param referer: Optional Referer header value. If None, it will be excluded.
-    :param accept_language: Accept-Language header value. Defaults to English.
+    :param accept_language: Optional Accept-Language header value. If None, a random language is chosen.
     :param accept_encoding: Accept-Encoding header value. Defaults to common encodings.
     :param connection: Connection header value. Defaults to "keep-alive".
     :return: A dictionary of HTTP headers.
     """
-    ua = UserAgent()
+    if accept_language is None:
+        # Randomize language preference
+        languages = [
+            "en-US,en;q=0.9",
+            "en-GB,en;q=0.8",
+            "fr-FR,fr;q=0.9,en;q=0.8",
+            "de-DE,de;q=0.9,en;q=0.8",
+            "es-ES,es;q=0.9,en;q=0.8"
+        ]
+        accept_language = random.choice(languages)
+
     headers = {
-        "User-Agent": ua.random,
+        "User-Agent": _ua.random,
         "Accept-Language": accept_language,
         "Accept-Encoding": accept_encoding,
-        "Connection": connection
+        "Connection": connection,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Upgrade-Insecure-Requests": "1"
     }
 
     if referer:

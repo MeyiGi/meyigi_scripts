@@ -8,9 +8,9 @@ def prevent_sleep():
         # Get current mouse position
         x, y = pyautogui.position()
 
-        # Move mouse a few pixels in a random direction
-        dx = random.randint(-10, 10)
-        dy = random.randint(-10, 10)
+        # Move mouse by only 1 pixel in a random direction (including staying in place)
+        dx = random.choice([-1, 0, 1])
+        dy = random.choice([-1, 0, 1])
         pyautogui.moveTo(x + dx, y + dy, duration=0.2)
 
         # Wait a random interval

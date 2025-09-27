@@ -180,3 +180,7 @@ download_file function, to streamline the library and remove the wget dependency
 ## [2.1.2] - 2025-09-24
 ### Added
 - Fixed import errors
+
+## [2.1.3] - 2025-09-24
+### Added
+- Increased Robustness of prevent_sleep and get_random_headers functions
