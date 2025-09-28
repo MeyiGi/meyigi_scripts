@@ -3,16 +3,17 @@ import random
 import requests
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
+from typing import Optional, Dict
 
 # Initialize UserAgent once to avoid repeated overhead
 _ua = UserAgent()
 
 def get_random_headers(
-    referer: str = None,
-    accept_language: str = None,
+    referer: Optional[str] = None,
+    accept_language: Optional[str] = None,
     accept_encoding: str = "gzip, deflate, br",
     connection: str = "keep-alive"
-) -> dict:
+) -> Dict[str, str]:
     """
     Generate random HTTP headers for making web requests.
 
@@ -33,8 +34,14 @@ def get_random_headers(
         ]
         accept_language = random.choice(languages)
 
-    headers = {
-        "User-Agent": _ua.random,
+    # NOTE: this project expects a Desktop Chrome User-Agent here.
+    # The internal browser._get_desktop_user_agent() explicitly filters for
+    # desktop-like UAs — keep the behavior here consistent with that function.
+    # _ua.random is expected to provide a Desktop Chrome UA in this codebase.
+    user_agent: str = _ua.random
+
+    headers: Dict[str, str] = {
+        "User-Agent": user_agent,
         "Accept-Language": accept_language,
         "Accept-Encoding": accept_encoding,
         "Connection": connection,

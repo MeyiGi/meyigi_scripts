@@ -181,6 +181,13 @@ download_file function, to streamline the library and remove the wget dependency
 ### Added
 - Fixed import errors
 
-## [2.1.3] - 2025-09-24
+## [2.1.3] - 2025-09-25
 ### Added
 - Increased Robustness of prevent_sleep and get_random_headers functions
+
+## [2.1.4] - 2025-09-28
+### Added
+- Removed init project garbage function
+- load_txt function now with .strip() working right away for "list" return type
+- docs(network): add typing + comment clarifying Desktop Chrome User-Agent in get_random_headers.
+

@@ -34,4 +34,4 @@ def load_txt(filename: str, return_type: Literal["string", "list"] = "string") -
             case "string":
                 return file.read()
             case "list":
-                return file.readlines()
+                return [line.strip() for line in file.readlines()]

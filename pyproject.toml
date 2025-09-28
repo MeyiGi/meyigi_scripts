@@ -1,6 +1,6 @@
 [project]
 name = "meyigi-scripts"
-version = "2.1.3"
+version = "2.1.4"
 description = "A collection of useful scripts for AI, scraping, file I/O, and automation."
 authors = [{ name = "Daniel Kanybekov", email = "kanybekovdaniel069@gmail.com" }]
 readme = "README.md"

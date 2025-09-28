@@ -14,7 +14,6 @@ from .scraping.parsers import get_item, get_attribute, get_selector
 from .scraping.browser import PlaywrightUndetected, wait_for_min_elements, setup_browser
 
 from .system.human_like_scroll_to_bottom import human_like_scroll_bottom_hits
-from .system.init_project import init_project
 from .system.prevent_sleep import prevent_sleep
 
 from .utils.decorators import timeit, retry
