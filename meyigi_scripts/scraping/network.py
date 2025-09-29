@@ -1,6 +1,7 @@
 import wget
 import random
 import requests
+import httpx
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 from typing import Optional, Dict
@@ -8,6 +9,37 @@ from typing import Optional, Dict
 # Initialize UserAgent once to avoid repeated overhead
 _ua = UserAgent()
 
+async def get_async_requests(url: str, timeout: int = 10, headers: dict = None) -> BeautifulSoup:
+    """Asynchronously makes a GET request and returns a BeautifulSoup object.
+
+    Args:
+        url (str): The target URL for the GET request.
+        timeout (int, optional): Timeout in seconds. Defaults to 10.
+        headers (dict, optional): Optional headers for the request. Defaults to None.
+
+    Raises:
+        httpx.HTTPStatusError: If the request returns a 4xx or 5xx status code.
+        httpx.TimeoutException: If the request times out.
+        httpx.RequestError: For other network-related errors.
+
+    Returns:
+        BeautifulSoup: A BeautifulSoup object of the page content.
+    """
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.get(url, headers=headers, timeout=timeout)
+            response.raise_for_status()
+        
+        soup = BeautifulSoup(response.text, "lxml")
+        return soup
+
+    except httpx.HTTPStatusError as e:
+        raise httpx.HTTPStatusError(f"HTTP Error: {e.response.status_code} for url: {e.request.url}", request=e.request, response=e.response)
+    except httpx.TimeoutException as e:
+        raise httpx.TimeoutException("The request timed out.", request=e.request)
+    except httpx.RequestError as e:
+        raise httpx.RequestError(f"A network error occurred: {e}", request=e.request)
+    
 def get_random_headers(
     referer: Optional[str] = None,
     accept_language: Optional[str] = None,

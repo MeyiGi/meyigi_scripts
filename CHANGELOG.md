@@ -191,3 +191,10 @@ download_file function, to streamline the library and remove the wget dependency
 - load_txt function now with .strip() working right away for "list" return type
 - docs(network): add typing + comment clarifying Desktop Chrome User-Agent in get_random_headers.
 
+## [2.2.0] - 2025-09-29
+### Added
+- **Asynchronous HTTP Requests**: Introduced `get_async_requests` function in `meyigi_scripts.scraping.network`. This function uses `httpx` to perform high-concurrency, asynchronous GET requests, aligning with the library's `async` Playwright features.
+- **CSV File Support**: Added a new `csv` module to `fileio` with `append_to_csv` and `read_csv` functions to handle reading and writing data in CSV format.
+
+### Changed
+- **Async Parser Utilities**: The `get_attribute` and `get_item` functions have been updated to include asynchronous support, ensuring full compatibility with the `async` Playwright API. *(This would be the next logical step to ensure consistency)*.
