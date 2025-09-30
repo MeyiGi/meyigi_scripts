@@ -4,7 +4,8 @@
 from .ai.chatgpt import chatgpt_get_response
 from .ai.gemini import generate
 
-from .fileio.excel import append_to_excel
+from .fileio.excel_processor import append_to_excel
+from .fileio.csv_processor import append_to_csv, read_csv_as_dicts
 from .fileio.json import append_to_json, read_json_file, read_json_folder
 from .fileio.text import append_to_txt, load_txt
 from .fileio.loaders import load_html_files
@@ -30,10 +31,14 @@ __all__ = [
     # fileio
     "append_to_excel",
     "append_to_json",
+    "append_to_csv",
     "append_to_txt",
     "load_txt",
     "load_html_files",
-
+    "read_csv_as_dicts",
+    "read_json_file",
+    "read_json_folder",
+    
     # scraping
     "get_requests",
     "get_random_headers",

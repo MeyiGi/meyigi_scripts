@@ -198,3 +198,8 @@ download_file function, to streamline the library and remove the wget dependency
 
 ### Changed
 - **Async Parser Utilities**: The `get_attribute` and `get_item` functions have been updated to include asynchronous support, ensuring full compatibility with the `async` Playwright API. *(This would be the next logical step to ensure consistency)*.
+
+## [2.3.0] - 2025-09-30
+### Added
+- Read csv as dict program
+- Append to csv program

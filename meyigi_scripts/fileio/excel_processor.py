@@ -48,3 +48,39 @@ def append_to_excel(data: Union[dict, List[dict]], filename: str = "output.xlsx"
         sheet.append(row)
 
     workbook.save(filename)
+
+def read_csv_as_dicts(filename: str, delimiter: str = ",") -> List[dict]:
+    """Reads a CSV file and returns its contents as a list of dictionaries.
+
+    Args:
+        filename (str): Path to the CSV file.
+        delimiter (str, optional): Delimiter used in the CSV file. Defaults to ",".
+
+    Raises:
+        FileNotFoundError: Raised if the specified file does not exist.
+        ValueError: Raised if the CSV file is empty.
+
+    Returns:
+        List[dict]: List of dictionaries representing rows in the CSV file.
+        
+    Examples:
+        data = read_csv_as_dicts("data/input.csv")
+    """
+    if not os.path.exists(filename):
+        raise FileNotFoundError(f"The file {filename} does not exist.")
+
+    with open(filename, 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+
+    if not lines:
+        raise ValueError("The CSV file is empty.")
+
+    headers = lines[0].strip().split(delimiter)
+    data = []
+
+    for line in lines[1:]:
+        values = line.strip().split(delimiter)
+        row_dict = {headers[i]: values[i] if i < len(values) else "" for i in range(len(headers))}
+        data.append(row_dict)
+
+    return data

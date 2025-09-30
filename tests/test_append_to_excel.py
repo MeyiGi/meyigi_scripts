@@ -1,7 +1,7 @@
 import os
 import pytest
 import openpyxl
-from meyigi_scripts.fileio.excel import append_to_excel
+from meyigi_scripts.fileio.excel_processor import append_to_excel
 
 @pytest.fixture
 def temp_excel_file():
