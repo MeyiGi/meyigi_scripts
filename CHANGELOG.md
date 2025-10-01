@@ -203,3 +203,6 @@ download_file function, to streamline the library and remove the wget dependency
 ### Added
 - Read csv as dict program
 - Append to csv program
+
+## [2.3.1] - 2025-10-1
+- fixed error that was not allowring to properly use library

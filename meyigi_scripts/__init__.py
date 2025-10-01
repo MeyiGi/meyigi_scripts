@@ -51,7 +51,6 @@ __all__ = [
 
     # system
     "human_like_scroll_bottom_hits",
-    "init_project",
     "prevent_sleep",
 
     # utils
