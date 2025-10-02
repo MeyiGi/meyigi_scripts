@@ -1,6 +1,6 @@
 [project]
 name = "meyigi-scripts"
-version = "2.3.1"
+version = "2.3.2"
 description = "A collection of useful scripts for AI, scraping, file I/O, and automation."
 authors = [{ name = "Daniel Kanybekov", email = "kanybekovdaniel069@gmail.com" }]
 readme = "README.md"
@@ -21,7 +21,6 @@ dependencies = [
     "pytest>=8.0",
     "pytest-mock>=3.14",
     "requests-mock>=1.11",
-    "wget>=3.2",
     "pytest-asyncio>=1.2.0",
 ]
 
