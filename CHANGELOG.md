@@ -207,5 +207,8 @@ download_file function, to streamline the library and remove the wget dependency
 ## [2.3.1] - 2025-10-1
 - fixed error that was not allowring to properly use library
 
-## [2.4.2] - 2025-10-2
+## [2.3.2] - 2025-10-2
 - removed unwanted library that was automatically installing to system "wget"
+
+## [2.3.3] - 2025-10-3
+- still was issues with wget but now it is fixed

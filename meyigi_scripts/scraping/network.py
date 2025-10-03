@@ -1,4 +1,3 @@
-import wget
 import random
 import requests
 import httpx
