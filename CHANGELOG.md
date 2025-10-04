@@ -212,3 +212,6 @@ download_file function, to streamline the library and remove the wget dependency
 
 ## [2.3.3] - 2025-10-3
 - still was issues with wget but now it is fixed
+
+## [2.4.0] - 2025-10-4
+- added load_html_as_soup function that can handle either multiple files or single files 

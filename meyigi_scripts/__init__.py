@@ -8,7 +8,7 @@ from .fileio.excel_processor import append_to_excel
 from .fileio.csv_processor import append_to_csv, read_csv_as_dicts
 from .fileio.json import append_to_json, read_json_file, read_json_folder
 from .fileio.text import append_to_txt, load_txt
-from .fileio.loaders import load_html_files
+from .fileio.loaders import load_html_files, load_html_as_soup
 
 from .scraping.network import get_requests, get_random_headers
 from .scraping.parsers import get_item, get_attribute, get_selector
@@ -35,6 +35,7 @@ __all__ = [
     "append_to_txt",
     "load_txt",
     "load_html_files",
+    "load_html_as_soup",
     "read_csv_as_dicts",
     "read_json_file",
     "read_json_folder",
