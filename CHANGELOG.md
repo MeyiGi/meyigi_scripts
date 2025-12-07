@@ -215,3 +215,7 @@ download_file function, to streamline the library and remove the wget dependency
 
 ## [2.4.0] - 2025-10-4
 - added load_html_as_soup function that can handle either multiple files or single files 
+
+## [2.0.1] - 2025-12-07
+### Fixed
+- Removed duplicate `read_csv_as_dicts` function from `excel_processor.py` which was incorrectly placed.
